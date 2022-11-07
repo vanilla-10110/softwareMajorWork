@@ -13,8 +13,11 @@ public class ActivateTeleportationRay : MonoBehaviour
 
     public InputActionProperty leftCancel;
 
+    public XRRayInteractor leftRay;
     void Update()
     {
-        leftTeleportation.SetActive(leftCancel.action.ReadValue<float>() == 0 && leftActivate.action.ReadValue<float>() > 0.1f);
+        bool isLeftRayHovering = leftRay.TryGetHitInfo(out Vector3 leftPos, out Vector3 leftNormal, out int leftNumber, out bool leftValid);
+
+        leftTeleportation.SetActive(!isLeftRayHovering && leftCancel.action.ReadValue<float>() == 0 && leftActivate.action.ReadValue<float>() > 0.1f);
     }
 }
