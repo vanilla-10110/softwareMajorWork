@@ -1,5 +1,19 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-7684448424706935627
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d236b7d11115f2143951f1e14045df39, type: 3}
+  m_Name: WSA Settings
+  m_EditorClassIdentifier: 
+  m_LoaderManagerInstance: {fileID: 6754587616059853135}
+  m_InitManagerOnStart: 1
 --- !u!114 &-3899622427955300685
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -64,7 +78,11 @@ MonoBehaviour:
   Values:
   - {fileID: -1563764831936573055}
   - {fileID: 500828895227532682}
+<<<<<<< HEAD
   - {fileID: 4783550068646422326}
+=======
+  - {fileID: -7684448424706935627}
+>>>>>>> a37d0037c369302991ea4b055a0d759e28c0f13d
 --- !u!114 &500828895227532682
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -79,7 +97,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_LoaderManagerInstance: {fileID: -656274316863880718}
   m_InitManagerOnStart: 1
+<<<<<<< HEAD
 --- !u!114 &2797722943154915687
+=======
+--- !u!114 &6754587616059853135
+>>>>>>> a37d0037c369302991ea4b055a0d759e28c0f13d
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -94,6 +116,7 @@ MonoBehaviour:
   m_RequiresSettingsUpdate: 0
   m_AutomaticLoading: 0
   m_AutomaticRunning: 0
+<<<<<<< HEAD
   m_Loaders:
   - {fileID: 11400000, guid: 7e35c5da0b640bd41a1b66a87c2e86e8, type: 2}
 --- !u!114 &4783550068646422326
@@ -110,3 +133,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_LoaderManagerInstance: {fileID: 2797722943154915687}
   m_InitManagerOnStart: 1
+=======
+  m_Loaders: []
+>>>>>>> a37d0037c369302991ea4b055a0d759e28c0f13d
