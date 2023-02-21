@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Left Hand
   - Right Hand
+  - Portal Spawn
+  - Player Head
   layers:
   - Default
   - TransparentFX
@@ -17,11 +19,11 @@ TagManager:
   - hands
   - wall
   - grabbable
-  - 
-  - 
-  - 
-  - 
-  - 
+  - crystal
+  - portal frame
+  - floating crystal
+  - head
+  - portal
   - 
   - 
   - 
