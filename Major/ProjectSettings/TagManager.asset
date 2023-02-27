@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Left Hand
   - Right Hand
+  - Portal Spawn
+  - Player Head
+  - book
   layers:
   - Default
   - TransparentFX
@@ -14,15 +17,15 @@ TagManager:
   - Water
   - UI
   - character
-  - objects
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - hands
+  - wall
+  - grabbable
+  - crystal
+  - portal frame
+  - floating crystal
+  - head
+  - portal
+  - mirror wall
   - 
   - 
   - 
