@@ -8,15 +8,32 @@ public class GrabPhysics : MonoBehaviour
     public InputActionProperty grabInputSource;
     public float radius = 0.1f;
     public LayerMask grabLayer;
-
+    
+    public Collider handCollider;
+    public InputActionProperty isTriggerInputSource;
 
     private FixedJoint fixedJoint;
     private bool isGrabbing = false;
 
+   
 
     // Update is called once per frame
     void Update()
     {
+        
+
+        bool xInput = isTriggerInputSource.action.WasPressedThisFrame();
+
+        if (xInput)
+        {
+            handCollider.isTrigger = !handCollider.isTrigger;
+        }
+
+
+
+
+
+
         bool isGrabButtonPressed = grabInputSource.action.ReadValue<float>() > 0.1f;
 
         if (isGrabButtonPressed && !isGrabbing)
