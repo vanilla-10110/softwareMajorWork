@@ -83,7 +83,7 @@ public class EnemyAI : MonoBehaviour
             Rigidbody rb = Instantiate(projectile, transform.position, Quaternion.identity).GetComponent<Rigidbody>();
             rb.AddForce(transform.forward * 32f, ForceMode.Impulse);
             rb.AddForce(transform.up * 8f, ForceMode.Impulse);
-            //
+            //sets the wait between attacks i think
             alreadyAttacked = true;
             Invoke(nameof(ResetAttack), timeBetweenAttacks);
         }
@@ -94,7 +94,7 @@ public class EnemyAI : MonoBehaviour
 
     }
 
-    /*public void TakeDamage(int damage)
+    /*public void TakeDamage(int damage)                        cringe stuff that doesnt work because stoopid and i donnt wanna do it rn
     {
         health -= damage;
 
