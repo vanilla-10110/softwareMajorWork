@@ -2,16 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
-// this is vishnu kumar
 
 public class spawnPortal : MonoBehaviour
 {
     public Collider portalSpawn;
-    
+
     public Collider redCrystalCollider;
     public Collider yellowCrystalCollider;
     public Collider greenCrystalCollider;
-   
+
     public GameObject redCrystal;
     public GameObject yellowCrystal;
     public GameObject greenCrystal;
@@ -23,7 +22,7 @@ public class spawnPortal : MonoBehaviour
     public GameObject portalRed;
     public GameObject portalYellow;
     public GameObject portalGreen;
-    
+
     public Transform redCrystalPos;
     public Transform yellowCrystalPos;
     public Transform greenCrystalPos;
@@ -31,58 +30,38 @@ public class spawnPortal : MonoBehaviour
     public Transform redPos;
     public Transform yellowPos;
     public Transform greenPos;
-   
-    
-    
+
+
+    private void activatePortal(GameObject portal, Transform crystalPos, Transform crystalRestPos, Rigidbody crystalRB)
+    {   //spawns the portal and returns the crystal to it;s initial position
+        portal.SetActive(true);
+        crystalPos.position = crystalRestPos.position;
+        crystalPos.rotation = crystalRestPos.rotation;
+        crystalRB.velocity = Vector3.zero;
+        //for "activateGravityOnCollision" script
+        crystalRB.useGravity = false;
+        crystalRB.gameObject.layer = 12;
+    }
+
     private void OnCollisionEnter(Collision collision)
-    {
-
-
-
-
-        if(collision.collider == redCrystalCollider)
+    {   //detects which crystal was used and removes other portals
+        if (collision.collider == redCrystalCollider)
         {
-            portalRed.SetActive(true);
+            activatePortal(portalRed, redCrystalPos, redPos, redRB);
             portalYellow.SetActive(false);
             portalGreen.SetActive(false);
-
-            redCrystalPos.position = redPos.position;
-            redCrystalPos.rotation = redPos.rotation;
-            redRB.velocity = Vector3.zero;
-            redRB.useGravity = false;
-            redCrystal.layer = 12;
-            
         }
-           else if(collision.collider == yellowCrystalCollider)
+        else if (collision.collider == yellowCrystalCollider)
         {
-            portalYellow.SetActive(true);
+            activatePortal(portalYellow, yellowCrystalPos, yellowPos, yellowRB);
             portalRed.SetActive(false);
             portalGreen.SetActive(false);
-
-            yellowCrystalPos.position = yellowPos.position;
-            yellowCrystalPos.rotation = yellowPos.rotation;
-            yellowRB.velocity = Vector3.zero;
-            yellowRB.useGravity = false;
-            yellowCrystal.layer = 12;
         }
-            else if(collision.collider == greenCrystalCollider)
+        else if (collision.collider == greenCrystalCollider)
         {
-            portalGreen.SetActive(true);
+            activatePortal(portalGreen, greenCrystalPos, greenPos, greenRB);
             portalRed.SetActive(false);
             portalYellow.SetActive(false);
-
-            greenCrystalPos.position = greenPos.position;
-            greenCrystalPos.rotation = greenPos.rotation;
-            greenRB.velocity = Vector3.zero;
-            greenRB.useGravity = false;
-            greenCrystal.layer = 12;
         }
-        
-
-
-
-
-
-        //Debug.Log("Collision detected at " + collision.contacts[0].point + " with a velocity of " + collision.relativeVelocity.magnitude);
     }
 }
