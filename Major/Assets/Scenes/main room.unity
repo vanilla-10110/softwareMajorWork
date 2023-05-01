@@ -36734,7 +36734,7 @@ GameObject:
   - component: {fileID: 1001501348}
   - component: {fileID: 1001501347}
   m_Layer: 0
-  m_Name: Advancement
+  m_Name: Sacrifice
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
