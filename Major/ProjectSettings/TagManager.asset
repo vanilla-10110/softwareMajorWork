@@ -9,6 +9,7 @@ TagManager:
   - Portal Spawn
   - Player Head
   - book
+  - player
   layers:
   - Default
   - TransparentFX
