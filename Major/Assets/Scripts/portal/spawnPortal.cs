@@ -33,7 +33,7 @@ public class spawnPortal : MonoBehaviour
 
 
     private void activatePortal(GameObject portal, Transform crystalPos, Transform crystalRestPos, Rigidbody crystalRB)
-    {   //spawns the portal and returns the crystal to it;s initial position
+    {   //spawns the portal and returns the crystal to it's initial position
         portal.SetActive(true);
         crystalPos.position = crystalRestPos.position;
         crystalPos.rotation = crystalRestPos.rotation;
