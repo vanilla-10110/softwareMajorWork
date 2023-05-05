@@ -50,7 +50,6 @@ public class spawnPortal : MonoBehaviour
             activatePortal(portalRed, redCrystalPos, redPos, redRB);
             portalYellow.SetActive(false);
             portalGreen.SetActive(false);
-            //add online help thingy
         }
         else if (collision.collider == yellowCrystalCollider)
         {
