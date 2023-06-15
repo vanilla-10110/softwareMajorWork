@@ -10,6 +10,8 @@ TagManager:
   - Player Head
   - book
   - player
+  - Weapon
+  - enemy
   layers:
   - Default
   - TransparentFX
@@ -27,7 +29,7 @@ TagManager:
   - head
   - portal
   - mirror wall
-  - 
+  - enemy
   - 
   - 
   - 
