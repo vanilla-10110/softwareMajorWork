@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class spawnPortal : MonoBehaviour
 {
@@ -39,8 +40,7 @@ public class spawnPortal : MonoBehaviour
         crystalPos.rotation = crystalRestPos.rotation;
         crystalRB.velocity = Vector3.zero;
         //for "activateGravityOnCollision" script
-        crystalRB.useGravity = false;
-        crystalRB.gameObject.layer = 12;
+       
     }
 
     private void OnCollisionEnter(Collision collision)

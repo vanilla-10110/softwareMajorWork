@@ -14,13 +14,12 @@ public class startGame : MonoBehaviour
     public Collider headCollider;
 
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collision collision)
     {
         if(collision.collider == headCollider)
         {
             SceneManager.LoadScene("stage one");
 
         }
-
     }
 }
