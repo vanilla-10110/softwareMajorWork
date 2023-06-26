@@ -4,35 +4,31 @@ using UnityEngine;
 
 public class enemyHitReg : MonoBehaviour
 {
- 
-    public Rigidbody rb; 
-    // Start is called before the first frame update
+    public float enemyHealth = 100f;
+    public Rigidbody rb;
+    public WeaponScript playerWeapon;
+
     void Start()
     {
-        
+        playerWeapon = GameObject.Find("PlayerWeapon").GetComponent<WeaponScript>();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        
+        if (enemyHealth <= 0) 
+        {
+            Debug.Log("wow me be deds");
+            enemyHealth = 100f;
+        }
     }
-
 
     void OnCollisionEnter(Collision collision)
     {
-        
-        if (collision.gameObject.name == "MyGameObjectName")
-        {
-            
-            Debug.Log("Do something here");
-        }
-
         if (collision.gameObject.tag == "Weapon")
-        { 
-            Debug.Log("we be dying");
+        {
+            float playerDamage = playerWeapon.damage; 
+            enemyHealth -= playerDamage;
+            Debug.Log("Dealt " + playerDamage + " Damage.");
         }
     }
-    
-
 }
