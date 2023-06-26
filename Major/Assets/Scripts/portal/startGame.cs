@@ -13,14 +13,15 @@ public class startGame : MonoBehaviour
 
     public Collider headCollider;
 
-
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider collision)
     {
-        if(collision.collider == headCollider)
+        Debug.Log("Hello");
+        if (collision.GetComponent<Collider>() == headCollider)
         {
+            Debug.Log("why no work?");
             SceneManager.LoadScene("stage one");
 
         }
-
     }
+   
 }
