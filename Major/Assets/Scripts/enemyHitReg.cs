@@ -8,6 +8,9 @@ public class enemyHitReg : MonoBehaviour
     public Rigidbody rb;
     public WeaponScript playerWeapon;
 
+    public GameObject ragDoll;
+    public GameObject enemy;
+
     void Start()
     {
         playerWeapon = GameObject.Find("PlayerWeapon").GetComponent<WeaponScript>();
@@ -19,6 +22,11 @@ public class enemyHitReg : MonoBehaviour
         {
             Debug.Log("wow me be deds");
             enemyHealth = 100f;
+            enemy.SetActive(false);
+            ragDoll.SetActive(true);
+            ragDoll.transform.position = enemy.transform.position;
+            ragDoll.transform.rotation = enemy.transform.rotation;
+
         }
     }
 
