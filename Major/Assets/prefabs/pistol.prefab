@@ -272,9 +272,10 @@ GameObject:
   - component: {fileID: 1058952354492926769}
   - component: {fileID: 1058952354492926774}
   - component: {fileID: 1058952354492926775}
+  - component: {fileID: -7242567659628992158}
   m_Layer: 9
   m_Name: pistol
-  m_TagString: Untagged
+  m_TagString: Weapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -340,7 +341,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 135e7e898fadf8145aa2642527a6ffa9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet: {fileID: 3637361188416335819, guid: dc9c0ff352d07e544b7866c1fb543dae, type: 3}
+  bullet: {fileID: 8646929998761388530, guid: c248a34c634361d4ba5452f70b48910d, type: 3}
   spawnPoint: {fileID: 1058952354963380967}
   fireSpeed: 50
 --- !u!114 &1058952354492926775
@@ -470,3 +471,16 @@ MonoBehaviour:
   m_AddDefaultGrabTransformers: 1
   leftAttachTransform: {fileID: 1058952353751508185}
   rightAttachTransform: {fileID: 1058952354389996098}
+--- !u!114 &-7242567659628992158
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3471916198626109861}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1498a6bcdb067424f86c047c8903b1f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 10

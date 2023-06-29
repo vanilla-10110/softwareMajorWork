@@ -26,9 +26,9 @@ public class openMenu : MonoBehaviour
         gameplayCanvas.SetActive(!gameplayCanvas.activeSelf);
     }
 
-    private void Update()
-    {
-        if(gameplayButton.)
-    }
+      /*  private void Update()
+        {
+            if(gameplayButton.)
+        }*/
 
 }

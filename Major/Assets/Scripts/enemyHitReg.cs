@@ -7,7 +7,7 @@ public class enemyHitReg : MonoBehaviour
     public float enemyHealth = 100f;
     public float forceMagnitude = 8f;
     public Rigidbody rb;
-    public WeaponScript playerWeapon;
+    WeaponScript playerWeapon;
 
     public GameObject ragDoll;
     public GameObject enemy;
@@ -15,8 +15,17 @@ public class enemyHitReg : MonoBehaviour
 
     void Start()
     {
-        playerWeapon = GameObject.Find("PlayerWeapon").GetComponent<WeaponScript>();
+        GameObject weaponGameObject = GameObject.FindGameObjectWithTag("Weapon");
+        if (weaponGameObject != null)
+        {
+            playerWeapon = weaponGameObject.GetComponent<WeaponScript>();
+        }
+        else
+        {
+            Debug.LogError("No weapon GameObject found with the 'Weapon' tag.");
+        }
     }
+
 
     private void Update()
     {
