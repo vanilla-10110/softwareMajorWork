@@ -24,27 +24,28 @@ public class GameMenuManager : MonoBehaviour
     {
         menu = optionsMenu;
 
-        gameplayButton.onClick.AddListener(activateGameplayOptions);
-        accessibilityButton.onClick.AddListener(activateAccessibilityOptions);
-        audioButton.onClick.AddListener(activateAudioOptions);
+        //gameplayButton.onClick.AddListener(activateGameplayOptions);
+        //accessibilityButton.onClick.AddListener(activateAccessibilityOptions);
+        //audioButton.onClick.AddListener(activateAudioOptions);
+        gameplayButton.onClick.AddListener(() => switchMenu(gameplayOptions));
+        accessibilityButton.onClick.AddListener(() => switchMenu(accessibilityOptions));
+        audioButton.onClick.AddListener(() => switchMenu(audioOptions));
     }
 
     void Update()
     {
-        if (showButton.action.WasPressedThisFrame())
+        if ((showButton.action.WasPressedThisFrame()) && (menu == gameplayOptions || menu == accessibilityOptions || menu == audioOptions))
         {
-            if (menu == gameplayOptions || menu == accessibilityOptions || menu == audioOptions)
-            {
-                menu.SetActive(!menu.activeSelf);
-                menu = optionsMenu;
-            }
-            else
-            {
-                menu.SetActive(!menu.activeSelf);
-            }
+            menu.SetActive(!menu.activeSelf);
+            menu = optionsMenu;
+        }
+        else if (showButton.action.WasPressedThisFrame())
+        {
+            menu.SetActive(!menu.activeSelf);
         }
     }
 
+    /*These three are silly and we should use the bottom one instead. put them all into the one switchMenu() with parameters 
     void activateGameplayOptions()
     {
         menu = gameplayOptions;
@@ -55,14 +56,20 @@ public class GameMenuManager : MonoBehaviour
     {
         menu = accessibilityOptions;
         optionsMenu.SetActive(false);
-        accessibilityOptions.SetActive(true);
+        //accessibilityOptions.SetActive(true);
     }
 
     void activateAudioOptions()
     {
         menu = audioOptions;
         optionsMenu.SetActive(false);
-        audioOptions.SetActive(true);
+        //audioOptions.SetActive(true);
+    }*/
+    void switchMenu(GameObject newMenu)
+    {
+        menu = newMenu;
+        optionsMenu.SetActive(false);
+        newMenu.SetActive(true);
     }
 }
     
