@@ -1,33 +1,70 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 public class GameMenuManager : MonoBehaviour
 {
-    public Transform head;
-    public float spawnDistance = 1;
-    public GameObject menu;
+    GameObject menu;
     public InputActionProperty showButton;
 
+    public GameObject optionsMenu;
+    public GameObject gameplayOptions;
+    public GameObject accessibilityOptions;
+    public GameObject audioOptions;
 
-    // Start is called before the first frame update
-    void Start()
+    public Button gameplayButton;
+    public Button accessibilityButton;
+    public Button audioButton;
+
+
+    private void Start()
     {
-        
+        menu = optionsMenu;
+
+        gameplayButton.onClick.AddListener(activateGameplayOptions);
+        accessibilityButton.onClick.AddListener(activateAccessibilityOptions);
+        audioButton.onClick.AddListener(activateAudioOptions);
     }
 
-    // Update is called once per frame
     void Update()
     {
-        if(showButton.action.WasPressedThisFrame())
+        if (showButton.action.WasPressedThisFrame())
         {
-            menu.SetActive(!menu.activeSelf);
-
-            menu.transform.position = head.position + new Vector3(head.forward.x, 0, head.forward.z).normalized * spawnDistance;
+            if (menu == gameplayOptions || menu == accessibilityOptions || menu == audioOptions)
+            {
+                menu.SetActive(!menu.activeSelf);
+                menu = optionsMenu;
+            }
+            else
+            {
+                menu.SetActive(!menu.activeSelf);
+            }
         }
+    }
 
-        menu.transform.LookAt(new Vector3(head.position.x, menu.transform.position.y, head.position.z));
-        menu.transform.forward *= -1;
+    void activateGameplayOptions()
+    {
+        menu = gameplayOptions;
+        optionsMenu.SetActive(false);
+    }
+
+    void activateAccessibilityOptions()
+    {
+        menu = accessibilityOptions;
+        optionsMenu.SetActive(false);
+        accessibilityOptions.SetActive(true);
+    }
+
+    void activateAudioOptions()
+    {
+        menu = audioOptions;
+        optionsMenu.SetActive(false);
+        audioOptions.SetActive(true);
     }
 }
+    
+
+
