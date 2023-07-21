@@ -18,6 +18,7 @@ public class GameMenuManager : MonoBehaviour
     public Button gameplayButton;
     public Button accessibilityButton;
     public Button audioButton;
+    public Button quitButton;
 
 
     private void Start()
@@ -27,6 +28,7 @@ public class GameMenuManager : MonoBehaviour
         gameplayButton.onClick.AddListener(activateGameplayOptions);
         accessibilityButton.onClick.AddListener(activateAccessibilityOptions);
         audioButton.onClick.AddListener(activateAudioOptions);
+        quitButton.onClick.AddListener(quitApp);
     }
 
     void Update()
@@ -63,6 +65,10 @@ public class GameMenuManager : MonoBehaviour
         menu = audioOptions;
         optionsMenu.SetActive(false);
         audioOptions.SetActive(true);
+    }
+    void quitApp()
+    {
+        Application.Quit();
     }
 }
     
