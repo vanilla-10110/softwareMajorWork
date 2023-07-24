@@ -12,6 +12,7 @@ TagManager:
   - player
   - Weapon
   - enemy
+  - enemyWeapon
   layers:
   - Default
   - TransparentFX

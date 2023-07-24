@@ -400,7 +400,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   agent: {fileID: 5940897006268260706}
-  player: {fileID: 0}
+  player: {fileID: 3530096926011126997, guid: 8c1a36812f5eea14aa95d250d04f50a4, type: 3}
   whatIsGround:
     serializedVersion: 2
     m_Bits: 1
@@ -409,12 +409,12 @@ MonoBehaviour:
     m_Bits: 64
   health: 10
   walkPoint: {x: 0, y: 0, z: 0}
-  walkPointRange: 10
+  walkPointRange: 20
   timeBetweenAttacks: 1
-  projectile: {fileID: 8646929998761388530, guid: c248a34c634361d4ba5452f70b48910d,
+  projectile: {fileID: 8646929998761388530, guid: 549197200f0b78544ad1117df68b4fb9,
     type: 3}
-  sightRange: 23
-  attackRange: 1
+  sightRange: 30
+  attackRange: 8
   playerInSightRange: 0
   playerInAttackRange: 0
 --- !u!114 &5940897006268260718

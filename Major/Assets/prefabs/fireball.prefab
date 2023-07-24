@@ -14,8 +14,8 @@ GameObject:
   - component: {fileID: 3375475583946670230}
   - component: {fileID: 135183519372058628}
   - component: {fileID: -4301145088433234527}
-  m_Layer: 0
-  m_Name: Bullet
+  m_Layer: 7
+  m_Name: fireball
   m_TagString: Weapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -229,9 +229,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4795419193766737591}
     m_Modifications:
+    - target: {fileID: 1226637380801028, guid: 673011a12ec748844a398a9504a957a4, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 1677232327238848, guid: 673011a12ec748844a398a9504a957a4, type: 3}
       propertyPath: m_Name
       value: FX_Trail_Fire_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 1677232327238848, guid: 673011a12ec748844a398a9504a957a4, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4293721835894692, guid: 673011a12ec748844a398a9504a957a4, type: 3}
       propertyPath: m_RootOrder
