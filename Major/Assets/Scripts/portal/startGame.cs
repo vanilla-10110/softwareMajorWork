@@ -15,10 +15,10 @@ public class startGame : MonoBehaviour
 
     private void OnTriggerEnter(Collider collision)
     {
-        Debug.Log("Hello");
+        
         if (collision.GetComponent<Collider>() == headCollider)
         {
-            Debug.Log("why no work?");
+            
             SceneManager.LoadScene("stage one");
 
         }
