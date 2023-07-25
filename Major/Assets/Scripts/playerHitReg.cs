@@ -1,21 +1,22 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class playerHitReg : MonoBehaviour
 {
-    public float enemyHealth = 100f;
+    public float playerHealth = 100f;
     public float forceMagnitude = 8f;
     public Rigidbody rb;
     WeaponScript enemyWeapon;
 
     public GameObject ragDoll;
-    public GameObject enemy;
+    public GameObject player;
     public Rigidbody ragDollRB;
 
     void Start()
     {
-        GameObject weaponGameObject = GameObject.FindGameObjectWithTag("Weapon");
+        GameObject weaponGameObject = GameObject.FindGameObjectWithTag("enemyWeapon");
         if (weaponGameObject != null)
         {
             enemyWeapon = weaponGameObject.GetComponent<WeaponScript>();
@@ -29,38 +30,30 @@ public class playerHitReg : MonoBehaviour
 
     private void Update()
     {
-        if (enemyHealth <= 0)
+        if (playerHealth <= 0)
         {
             Debug.Log("wow me be deds");
-            enemyHealth = 100f;
-            enemy.SetActive(false);
-            ragDoll.SetActive(true);
-            ragDoll.transform.position = enemy.transform.position;
-            ragDoll.transform.rotation = enemy.transform.rotation;
-            ragDollRB.AddForce(-transform.forward * forceMagnitude, ForceMode.Impulse);
+            playerHealth = 100f;
+            SceneManager.LoadScene("armoury");
         }
     }
 
     void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("Weapon"))
+        if (collision.gameObject.CompareTag("enemyWeapon"))
         {
-            float playerDamage = enemyWeapon.damage;
-            TakeDamage(playerDamage);
-            Debug.Log("Dealt " + playerDamage + " Damage.");
+            float enemyDamage = enemyWeapon.damage;
+            TakeDamage(enemyDamage);
+            Debug.Log("Enemy Dealt " + enemyDamage + " Damage.");
         }
     }
 
     private void TakeDamage(float damage)
     {
-        enemyHealth -= damage;
-        if (enemyHealth <= 0)
+        playerHealth -= damage;
+        if (playerHealth <= 0)
         {
-            enemy.SetActive(false);
-            ragDoll.SetActive(true);
-            ragDoll.transform.position = enemy.transform.position;
-            ragDoll.transform.rotation = enemy.transform.rotation;
-            ragDollRB.AddForce(-transform.forward * forceMagnitude, ForceMode.Impulse);
+            SceneManager.LoadScene("armoury");
         }
     }
 }
