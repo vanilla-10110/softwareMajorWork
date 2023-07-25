@@ -6209,7 +6209,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f23a9d26ea63034186166f58fac7ea0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  headCollider: {fileID: 0}
+  headCollider: {fileID: 1239991758}
 --- !u!65 &367733596
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -43414,6 +43414,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 3530096926011126996, guid: 8c1a36812f5eea14aa95d250d04f50a4,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3530096926011126997, guid: 8c1a36812f5eea14aa95d250d04f50a4,
         type: 3}
       propertyPath: m_RootOrder
@@ -43471,6 +43476,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8c1a36812f5eea14aa95d250d04f50a4, type: 3}
+--- !u!143 &1239991758 stripped
+CharacterController:
+  m_CorrespondingSourceObject: {fileID: 3530096924376928138, guid: 8c1a36812f5eea14aa95d250d04f50a4,
+    type: 3}
+  m_PrefabInstance: {fileID: 1239991757}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1260305137
 GameObject:
   m_ObjectHideFlags: 0
@@ -48911,7 +48922,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f23a9d26ea63034186166f58fac7ea0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  headCollider: {fileID: 0}
+  headCollider: {fileID: 1239991758}
 --- !u!65 &1489345464
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -135392,7 +135403,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f23a9d26ea63034186166f58fac7ea0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  headCollider: {fileID: 0}
+  headCollider: {fileID: 1239991758}
 --- !u!65 &199749858112106689
 BoxCollider:
   m_ObjectHideFlags: 0
