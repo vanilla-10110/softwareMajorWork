@@ -4288,6 +4288,7 @@ GameObject:
   - component: {fileID: 3530096924376928140}
   - component: {fileID: 3530096924376928137}
   - component: {fileID: 6147313952718222985}
+  - component: {fileID: 8652011088629411224}
   m_Layer: 6
   m_Name: XR Origin
   m_TagString: Untagged
@@ -4532,6 +4533,24 @@ MonoBehaviour:
   rightGrabRay: {fileID: 8066529114767178280}
   leftDirectGrab: {fileID: 8066529114766033600}
   rightDirectGrab: {fileID: 8066529114551549585}
+--- !u!114 &8652011088629411224
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3530096924376928131}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5bdd23044448e943beb4a449d28994d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyHealth: 100
+  forceMagnitude: 8
+  rb: {fileID: 0}
+  ragDoll: {fileID: 0}
+  enemy: {fileID: 0}
+  ragDollRB: {fileID: 0}
 --- !u!1 &3530096924453685116
 GameObject:
   m_ObjectHideFlags: 0

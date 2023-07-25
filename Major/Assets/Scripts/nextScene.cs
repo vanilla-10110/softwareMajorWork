@@ -1,4 +1,6 @@
 using System.Collections;
+using System.Collections.Generic;
+using UnityEditor.SearchService;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -6,9 +8,7 @@ public class nextScene : MonoBehaviour
 {
     public Collider headCollider;
     public string sceneName;
-    public string activeSceneName;
 
-    public int targetSceneIndex;
 
     public GameObject itemManager;
     public GameObject player;
