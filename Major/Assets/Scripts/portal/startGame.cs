@@ -10,7 +10,6 @@ using UnityEngine.SceneManagement;
 public class startGame : MonoBehaviour
 {
 
-
     public Collider headCollider;
 
     private void OnTriggerEnter(Collider collision)
