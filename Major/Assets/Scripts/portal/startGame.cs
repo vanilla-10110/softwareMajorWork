@@ -1,26 +1,36 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-
-
-
-
 public class startGame : MonoBehaviour
 {
-
     public Collider headCollider;
+    public GameObject player;
 
-    private void OnTriggerEnter(Collider collision)
+    
+    public GameObject prevStage;
+
+    public Transform tpPos;
+
+
+
+
+
+
+    private IEnumerator OnTriggerEnter(Collider collision)
     {
-        
+
         if (collision.GetComponent<Collider>() == headCollider)
         {
             
-            SceneManager.LoadScene("stage one");
+
+            yield return new WaitForSeconds(3);
+
+            player.transform.position = tpPos.position;
+            prevStage.SetActive(false);
 
         }
     }
-   
+
+
 }
