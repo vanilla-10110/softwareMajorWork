@@ -14,9 +14,6 @@ public class exitArmoury : MonoBehaviour
 
 
 
-
-
-
     private IEnumerator OnTriggerEnter(Collider collision)
     {
 
