@@ -12,6 +12,7 @@ TagManager:
   - player
   - Weapon
   - enemy
+  - enemyWeapon
   layers:
   - Default
   - TransparentFX
@@ -30,7 +31,7 @@ TagManager:
   - portal
   - mirror wall
   - enemy
-  - 
+  - ENEMYWEAPON
   - 
   - 
   - 

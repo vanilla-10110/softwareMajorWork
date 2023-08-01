@@ -9,7 +9,9 @@ public class EnemyAI : MonoBehaviour
     public Transform player;
     public LayerMask whatIsGround, whatIsPlayer;
     public float health;
-    
+    public GameObject bullet;
+    public Transform spawnPoint;
+    public float fireSpeed = 30;
 
     //Patroling
     public Vector3 walkPoint;
@@ -72,26 +74,32 @@ public class EnemyAI : MonoBehaviour
     }
     private void AttackPlayer()
     {
-        //ensure enemy doesnt move 
+        //Make sure enemy doesn't move
         agent.SetDestination(transform.position);
 
         transform.LookAt(player);
 
         if (!alreadyAttacked)
         {
-            //attack code here
-            Rigidbody rb = Instantiate(projectile, transform.position, Quaternion.identity).GetComponent<Rigidbody>();
-            rb.AddForce(transform.forward * 32f, ForceMode.Impulse);
-            rb.AddForce(transform.up * 8f, ForceMode.Impulse);
-            //
+            /*//Attack code here
+            GameObject rb = Instantiate(projectile, transform.position, Quaternion.identity).GetComponent<Rigidbody>();
+            rb.GetComponent<Rigidbody>().AddForce(transform.forward * 6f, ForceMode.Impulse);
+            rb.GetComponent<Rigidbody>().AddForce(transform.up * 6f, ForceMode.Impulse);
+            Destroy(rb, 5);
+            */
+            GameObject spawnedBullet = Instantiate(bullet);
+            spawnedBullet.transform.position = spawnPoint.position;
+            spawnedBullet.GetComponent<Rigidbody>().velocity = spawnPoint.forward * fireSpeed;
+            Destroy(spawnedBullet, 5);
+            ///End of attack code
+
             alreadyAttacked = true;
             Invoke(nameof(ResetAttack), timeBetweenAttacks);
         }
     }
     private void ResetAttack()
     {
-        alreadyAttacked = false; 
-
+        alreadyAttacked = false;
     }
 
     /*public void TakeDamage(int damage)
