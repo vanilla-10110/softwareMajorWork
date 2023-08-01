@@ -64,6 +64,7 @@ public class enemyHitReg : MonoBehaviour
         enemyHealth -= damage;
         if (enemyHealth <= 0)
         {
+
             enemy.SetActive(false);
             ragDoll.SetActive(true);
             ragDoll.transform.SetPositionAndRotation(enemy.transform.position, enemy.transform.rotation);

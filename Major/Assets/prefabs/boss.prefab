@@ -5511,7 +5511,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 589387052326482631}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -0.158, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5841,8 +5841,8 @@ GameObject:
   - component: {fileID: 5007674579197084218}
   - component: {fileID: 5007674579197084213}
   - component: {fileID: 5007674579197084212}
-  - component: {fileID: 5007674579197084217}
   - component: {fileID: 5007674579197084216}
+  - component: {fileID: 2739918199028355457}
   m_Layer: 16
   m_Name: Boss
   m_TagString: enemy
@@ -5929,36 +5929,16 @@ MonoBehaviour:
   health: 1000
   bullet: {fileID: 2128410076725962131, guid: 162616c8942f18e4fb20aa737f2c22de, type: 3}
   spawnPoint: {fileID: 8813167290943664933}
-  fireSpeed: 30
+  fireSpeed: 40
   walkPoint: {x: 0, y: 0, z: 0}
   walkPointRange: 20
-  timeBetweenAttacks: 1
+  timeBetweenAttacks: 0.2
   projectile: {fileID: 2128410076725962131, guid: 162616c8942f18e4fb20aa737f2c22de,
     type: 3}
   sightRange: 30
   attackRange: 8
   playerInSightRange: 0
   playerInAttackRange: 0
---- !u!114 &5007674579197084217
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5007674579197084215}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e8fe54a78f0c84145abf2172de323907, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemyHealth: 100
-  forceMagnitude: 8
-  rb: {fileID: 5007674579197084216}
-  itemManager: {fileID: 0}
-  ragDoll: {fileID: 344618842770424492}
-  enemy: {fileID: 5007674579197084215}
-  boom: {fileID: 1180248314969840, guid: 101d62f0a3e4fef4eab61adb79c845df, type: 3}
-  ragDollRB: {fileID: 1447529582257973565}
 --- !u!54 &5007674579197084216
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -5975,6 +5955,27 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &2739918199028355457
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5007674579197084215}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5136da14b45bf6446900ad16b4cfc702, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyHealth: 1000
+  forceMagnitude: 8
+  rb: {fileID: 5007674579197084216}
+  itemManager: {fileID: 0}
+  ragDoll: {fileID: 344618842770424492}
+  enemy: {fileID: 5007674579197084215}
+  endPortal: {fileID: 0}
+  boom: {fileID: 1180248314969840, guid: 101d62f0a3e4fef4eab61adb79c845df, type: 3}
+  ragDollRB: {fileID: 1447529582257973565}
 --- !u!1 &6705870160734202181
 GameObject:
   m_ObjectHideFlags: 0

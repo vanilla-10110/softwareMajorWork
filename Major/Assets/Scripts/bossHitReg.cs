@@ -4,14 +4,16 @@ using UnityEngine;
 
 public class bossHitReg : MonoBehaviour
 {
-    public float enemyHealth = 100f;
+    public float enemyHealth = 1000f;
     public float forceMagnitude = 8f;
     public Rigidbody rb;
     WeaponScript playerWeapon;
+    public itemManager itemManager;
 
     public GameObject ragDoll;
     public GameObject enemy;
-    public GameObject endPortal; 
+    public GameObject endPortal;
+    public GameObject boom;
     public Rigidbody ragDollRB;
 
     void Start()
@@ -36,6 +38,7 @@ public class bossHitReg : MonoBehaviour
             enemyHealth = 100f;
             enemy.SetActive(false);
             ragDoll.SetActive(true);
+            endPortal.SetActive(true);
             ragDoll.transform.position = enemy.transform.position;
             ragDoll.transform.rotation = enemy.transform.rotation;
             ragDollRB.AddForce(-transform.forward * forceMagnitude, ForceMode.Impulse);
