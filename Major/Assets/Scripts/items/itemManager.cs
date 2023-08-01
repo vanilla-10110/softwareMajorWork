@@ -31,7 +31,7 @@ public class itemManager : MonoBehaviour
         if (boomJuiceAmount != boomTemp)
         {
             //boom();
-            boomJuiceAmount = boomTemp;
+            boomTemp = boomJuiceAmount;
         }
 
     }

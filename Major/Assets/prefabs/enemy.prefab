@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &153860310105959331
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4431374147570303616}
+  m_Layer: 16
+  m_Name: firepoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4431374147570303616
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 153860310105959331}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5940897006268260716}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5940897004915857458
 GameObject:
   m_ObjectHideFlags: 0
@@ -348,6 +379,7 @@ Transform:
   - {fileID: 5940897004915857469}
   - {fileID: 5940897004973501560}
   - {fileID: 5936430704359898845}
+  - {fileID: 4431374147570303616}
   m_Father: {fileID: 5940897006085896973}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -408,6 +440,9 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   health: 10
+  bullet: {fileID: 8646929998761388530, guid: 549197200f0b78544ad1117df68b4fb9, type: 3}
+  spawnPoint: {fileID: 4431374147570303616}
+  fireSpeed: 30
   walkPoint: {x: 0, y: 0, z: 0}
   walkPointRange: 20
   timeBetweenAttacks: 1
@@ -432,8 +467,11 @@ MonoBehaviour:
   enemyHealth: 100
   forceMagnitude: 8
   rb: {fileID: 5940897006268260719}
+  itemManager: {fileID: 1814362710254637300, guid: 5b5bf16984d74674ca34a625fa812783,
+    type: 3}
   ragDoll: {fileID: 5940897006682895480}
   enemy: {fileID: 5940897006268260704}
+  boom: {fileID: 1180248314969840, guid: 101d62f0a3e4fef4eab61adb79c845df, type: 3}
   ragDollRB: {fileID: 5940897006682895482}
 --- !u!54 &5940897006268260719
 Rigidbody:
