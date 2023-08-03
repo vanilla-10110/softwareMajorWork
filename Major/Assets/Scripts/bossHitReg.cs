@@ -52,6 +52,12 @@ public class bossHitReg : MonoBehaviour
             float playerDamage = playerWeapon.damage;
             TakeDamage(playerDamage);
             Debug.Log("Dealt " + playerDamage + " Damage.");
+
+            if (itemManager.boomJuiceAmount != 0)
+            {
+                GameObject boomEffect = Instantiate(boom);
+                boomEffect.transform.position = enemy.transform.position;
+            }
         }
     }
 
