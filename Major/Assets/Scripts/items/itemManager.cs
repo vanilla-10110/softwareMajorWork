@@ -12,7 +12,9 @@ public class itemManager : MonoBehaviour
     
     public int horseShoeAmount = 0; int shoeTemp = 0;
     public int critAmount = 0; int critTemp = 0; float critChance = 0f;
-    
+    public int boomJuiceAmount = 0; int boomTemp = 0;
+
+
 
     private void Update()
     {
@@ -26,12 +28,16 @@ public class itemManager : MonoBehaviour
             crit();
             critTemp = critAmount;
         }
-
+        if (boomJuiceAmount != boomTemp)
+        {
+            //boom();
+            boomTemp = boomJuiceAmount;
+        }
 
     }
     public void speed()
     {
-        float newMoveSpeed = baseMoveSpeed + (0.1f * horseShoeAmount);
+        float newMoveSpeed = baseMoveSpeed + (0.2f * horseShoeAmount);
         continuousMoveProvider.moveSpeed = newMoveSpeed;
     }
     public void crit()
@@ -40,6 +46,9 @@ public class itemManager : MonoBehaviour
         critChance = newcrit;
         Debug.Log("crit chance = " + critChance);
     }
-
+    /*public void boom()
+    {
+        float newBoom = 1 * boomJuiceAmount;
+    }*/
 
 }

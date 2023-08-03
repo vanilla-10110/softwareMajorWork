@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 6825179664589883055}
   - component: {fileID: 3375475583946670230}
   - component: {fileID: 135183519372058628}
-  - component: {fileID: -4301145088433234527}
-  m_Layer: 7
+  - component: {fileID: 5966151677087921298}
+  m_Layer: 17
   m_Name: enemy fireball
   m_TagString: enemyWeapon
   m_Icon: {fileID: 0}
@@ -53,7 +53,7 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8646929998761388530}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5
@@ -209,7 +209,7 @@ MonoBehaviour:
   m_StartingSingleGrabTransformers: []
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
---- !u!114 &-4301145088433234527
+--- !u!114 &5966151677087921298
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -218,10 +218,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 8646929998761388530}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1498a6bcdb067424f86c047c8903b1f8, type: 3}
+  m_Script: {fileID: 11500000, guid: 4eb84638825bba44280e7c7fa235c1c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 100
+  damage: 5
 --- !u!1001 &4754689872833167569
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -231,7 +231,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1226637380801028, guid: 673011a12ec748844a398a9504a957a4, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 1677232327238848, guid: 673011a12ec748844a398a9504a957a4, type: 3}
       propertyPath: m_Name
@@ -239,7 +239,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1677232327238848, guid: 673011a12ec748844a398a9504a957a4, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 4293721835894692, guid: 673011a12ec748844a398a9504a957a4, type: 3}
       propertyPath: m_RootOrder
