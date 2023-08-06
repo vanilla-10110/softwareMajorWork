@@ -2,7 +2,22 @@ WELCOME TO SWORDS AND SPELLS!!!
 
 You probably stole this game and didn't get it from wherever we published it but we dont care.
 
-To open the game, first make sure your VR headset is on, then open the folder and double click on "major.exe". That is the game I promise it isn't a virus. Nothing will display on screen, but the game should be running in your VR headset. 
+To open the game, first make sure your VR headset is on, then open the folder and double click on "major.exe". 
+That is the game I promise it isn't a virus. Nothing will display on screen, but the game should be running in your VR headset. 
+
+Minimum System Requirements: 
+CPU: Intel i7 11000
+GPU: Nvidia GeForce RTX 2080 Super
+RAM: 16GB
+Storage: 5GB
+OS: Windows 10
+
+Reccomended System Requirements(to be safe):
+CPU: Intel i9 13000k
+GPU: Nvidia GeForce RTX 5090ti
+RAM: 128GB
+Storage: 1PB NVMe SSD
+OS: Windows 12+
 
 f.a.q
 Q:Why is this game so broken?
@@ -19,12 +34,6 @@ A: yeahh...
 
 Q:Is it a risk of rain 2 clone?
 A:Our game is too bad to be even considered similar to ror2.
-
-
-
-
-
-
 
 
 
